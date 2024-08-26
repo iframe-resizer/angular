@@ -1,0 +1,20 @@
+
+<h1>Parent page</h1>
+
+<div class="buttons">
+
+  <button (click)="resize()">resize</button>
+  <button (click)="moveToAnchor('testanchor')">moveToAnchor</button>
+  <button (click)="sendMessage('This is a test from parent!')">sendMessage</button>
+</div>
+
+<hr/>
+<iframe 
+  iframe-resizer 
+  [src]="src"
+  [options]="{ license: 'GPLv3' }" 
+  (onReady)="onReady($event)"
+  (onMessage)="onMessage($event)"
+  ></iframe>
+
+  

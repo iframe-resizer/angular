@@ -1,0 +1,32 @@
+<h2>Child page</h2>
+
+
+<div class="buttons">
+  <button (click)="getId()">getId</button>
+  <button (click)="getParentProps()">getParentProps</button>
+  <button (click)="sendMessage('This is a test from child!')">sendMessage</button>
+</div>
+
+<div>
+  <div>ID: <strong>{{ data.id }}</strong> </div>
+  <div>Props: </div>
+  <pre>{{ data.props }}</pre> 
+</div>
+
+<h2>Messages from parent</h2>
+<div style="height: 400px; overflow: scroll;">
+  @for (message of messageLog; track $index) {
+    <p>{{ message}}</p>
+  }
+
+</div>
+
+
+<div style="height:500px; ">height:500px</div>
+<hr/>
+<h2 id="testanchor">testanchor</h2>
+<p> test test test </p>
+<hr/>
+<div style="height:500px">height:500px</div>
+<hr/>
+
