@@ -6,15 +6,29 @@
   <button (click)="resize()">resize</button>
   <button (click)="moveToAnchor('testanchor')">moveToAnchor</button>
   <button (click)="sendMessage('This is a test from parent!')">sendMessage</button>
+  <button (click)="visible = !visible;">Toggle iframe</button>
 </div>
 
 <hr/>
-<iframe 
+
+@if (visible) { 
+<div> 
+  <iframe 
   iframe-resizer 
   [src]="src"
   [options]="{ license: 'GPLv3' }" 
   (onReady)="onReady($event)"
   (onMessage)="onMessage($event)"
+  (onMouseEnter)="onMouseEnter($event)"
+  (onMouseLeave)="onMouseLeave($event)"
+  (onResized)="onResized($event)"
+  (onScroll)="onScroll($event)"
+
+  [debug]="true"
   ></iframe>
 
+</div>
+}
+
+  
   

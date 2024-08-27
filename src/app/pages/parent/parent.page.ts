@@ -21,6 +21,7 @@ export class ParentPage {
 
   src:SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl('/child');
 
+  visible = true;
 
   constructor() {
 
@@ -29,28 +30,41 @@ export class ParentPage {
 
   // parnet events
   onReady(resizer:IframeResizerDirective) {
-    console.log("onReady: ", resizer);
+    console.log("ParentPage.onReady: ", resizer);
 
     
   }
 
   onMessage($event:{ resizer: IframeResizerDirective, message:string }) {
-    console.log("onMessage: ", $event);
+    console.log("ParentPage.onMessage: ", $event);
     $event.resizer.sendMessage("Reply back");
+  }
+
+  onMouseEnter($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+    console.log("ParentPage.onMouseEnter: ", $event);
+  }
+  onMouseLeave($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+    console.log("ParentPage.onMouseLeave: ", $event);
+  }
+  onResized($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+    console.log("ParentPage.onResized: ", $event);
+  }
+  onScroll($event:{ resizer: IframeResizerDirective, top:number, left:number}) {
+    console.log("ParentPage.onScroll: ", $event);
   }
 
   // parent methods 
   resize() {
-    console.log("resize: ", this.ifrd);
+    // console.log("resize: ", this.ifrd);
     this.ifrd?.resize();
   }
   moveToAnchor (anchor:string) {
-    console.log("moveToAnchor: ", this.ifrd);
+    // console.log("moveToAnchor: ", this.ifrd);
     this.ifrd?.moveToAnchor(anchor);
   }
 
   sendMessage(message:string, targetOrigin?:string) {
-    console.log("sendMessage: ", this.ifrd);
+    // console.log("sendMessage: ", this.ifrd);
     this.ifrd?.sendMessage(message, targetOrigin)
   }
 

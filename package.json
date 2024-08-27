@@ -22,8 +22,10 @@
     "@iframe-resizer/child": "^5.2.6",
     "@iframe-resizer/core": "^5.2.6",
     "@iframe-resizer/parent": "^5.2.6",
+    "@types/warning": "^3.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "warning": "^4.0.3",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
