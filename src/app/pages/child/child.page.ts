@@ -57,5 +57,9 @@ export class ChildPage {
     this.parentIframe().sendMessage(message)
 
   }
+  close() {
+    this.parentIframe().close()
+
+  }
 
 }

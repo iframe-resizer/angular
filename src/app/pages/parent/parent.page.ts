@@ -1,7 +1,8 @@
 import { Component, ViewChild, inject } from '@angular/core';
 
-import { IframeResizerDirective } from '../../iframe-resizer/iframe-resizer.directive';
+import { IframeResizerDirective, iframeResizerElement } from '../../iframe-resizer/iframe-resizer.directive';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 
 
@@ -15,8 +16,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class ParentPage {
 
   sanitizer = inject(DomSanitizer);
+  doc = inject(DOCUMENT);
 
-  @ViewChild(IframeResizerDirective) ifrd:IframeResizerDirective|undefined;
+  // @ViewChild(IframeResizerDirective) ifrd:IframeResizerDirective|undefined;
 
 
   src:SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl('/child');
@@ -29,43 +31,56 @@ export class ParentPage {
   }
 
   // parnet events
-  onReady(resizer:IframeResizerDirective) {
+
+  // onReadyTest(iframe:iframeResizerElement) {
+  //   let reseizer = iframe.iFrameResizer
+
+  //   console.log("ParentPage.onReadyTest: ", reseizer);
+
+  //   // reseizer.sendMessage("");
+  // }
+
+  onReady(resizer:iframeResizerElement) {
     console.log("ParentPage.onReady: ", resizer);
 
     
   }
 
-  onMessage($event:{ resizer: IframeResizerDirective, message:string }) {
+  onMessage($event:{ iframe: iframeResizerElement, message:string }) {
     console.log("ParentPage.onMessage: ", $event);
-    $event.resizer.sendMessage("Reply back");
+    $event.iframe.iFrameResizer.sendMessage("Reply back");
   }
 
-  onMouseEnter($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+  onMouseEnter($event:{ iframe: iframeResizerElement, height:number, width:number, type:string }) {
     console.log("ParentPage.onMouseEnter: ", $event);
   }
-  onMouseLeave($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+  onMouseLeave($event:{ iframe: iframeResizerElement, height:number, width:number, type:string }) {
     console.log("ParentPage.onMouseLeave: ", $event);
   }
-  onResized($event:{ resizer: IframeResizerDirective, height:number, width:number, type:string }) {
+  onResized($event:{ iframe: iframeResizerElement, height:number, width:number, type:string }) {
     console.log("ParentPage.onResized: ", $event);
   }
-  onScroll($event:{ resizer: IframeResizerDirective, top:number, left:number}) {
+  onScroll($event:{ iframe: iframeResizerElement, top:number, left:number}) {
     console.log("ParentPage.onScroll: ", $event);
   }
 
   // parent methods 
   resize() {
     // console.log("resize: ", this.ifrd);
-    this.ifrd?.resize();
+    let iframe = this.doc.getElementById("theIframe") as iframeResizerElement
+    iframe?.iFrameResizer.resize();
   }
   moveToAnchor (anchor:string) {
     // console.log("moveToAnchor: ", this.ifrd);
-    this.ifrd?.moveToAnchor(anchor);
+    let iframe = this.doc.getElementById("theIframe") as iframeResizerElement
+    iframe?.iFrameResizer.moveToAnchor(anchor);
   }
 
   sendMessage(message:string, targetOrigin?:string) {
+    let iframe = this.doc.getElementById("theIframe") as iframeResizerElement
+    iframe.iFrameResizer.sendMessage(message);
     // console.log("sendMessage: ", this.ifrd);
-    this.ifrd?.sendMessage(message, targetOrigin)
+    // this.ifrd?.sendMessage(message, targetOrigin)
   }
 
 }
