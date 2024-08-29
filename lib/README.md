@@ -4,20 +4,20 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Code scaffolding
 
-Run `ng generate component component-name --project iframe-resizer-angular-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project iframe-resizer-angular-lib`.
-> Note: Don't forget to add `--project iframe-resizer-angular-lib` or else it will be added to the default project in your `angular.json` file. 
+Run `ng generate component component-name --project @iframe-resizer/angular` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project @iframe-resizer/angular`.
+> Note: Don't forget to add `--project @iframe-resizer/angular` or else it will be added to the default project in your `angular.json` file. 
 
 ## Build
 
-Run `ng build iframe-resizer-angular-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build @iframe-resizer/angular` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 
-After building your library with `ng build iframe-resizer-angular-lib`, go to the dist folder `cd dist/iframe-resizer-angular-lib` and run `npm publish`.
+After building your library with `ng build @iframe-resizer/angular`, go to the dist folder `cd dist/@iframe-resizer/angular` and run `npm publish`.
 
 ## Running unit tests
 
-Run `ng test iframe-resizer-angular-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test @iframe-resizer/angular` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 

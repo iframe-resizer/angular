@@ -1,6 +1,6 @@
 import { Component, ViewChild, inject } from '@angular/core';
 
-import { IframeResizerDirective, iframeResizerElement } from 'iframe-resizer-angular-lib';
+import { IframeResizerDirective, iframeResizerElement } from '@iframe-resizer/angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 

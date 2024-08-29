@@ -7,8 +7,8 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "iframe-resizer-angular-lib": [
-        "./dist/iframe-resizer-angular-lib"
+      "@iframe-resizer/angular": [
+        "./dist/@iframe-resizer/angular"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,

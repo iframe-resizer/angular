@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/iframe-resizer-angular",
+            "outputPath": "dist/@iframe-resizer/angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -92,7 +92,7 @@
         }
       }
     },
-    "iframe-resizer-angular-lib": {
+    "@iframe-resizer/angular": {
       "projectType": "library",
       "root": "lib",
       "sourceRoot": "lib/src",
@@ -125,5 +125,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

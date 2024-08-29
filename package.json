@@ -1,6 +1,6 @@
 {
-  "name": "iframe-resizer-angular",
-  "version": "0.0.0",
+  "name": "@iframe-resizer/angular",
+  "version": "5.2.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

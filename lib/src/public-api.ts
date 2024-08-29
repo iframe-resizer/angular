@@ -1,5 +1,5 @@
 /*
- * Public API Surface of iframe-resizer-angular-lib
+ * Public API Surface of @iframe-resizer/angular
  */
 
 
