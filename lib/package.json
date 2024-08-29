@@ -1,12 +1,17 @@
 {
   "name": "@iframe-resizer/angular",
-  "version": "5.2.6-beta.2",
+  "version": "5.2.6-beta.3",
   "license": "GPL-3.0",
+  "homepage": "https://iframe-resizer.com",
   "description": "Keep iFrames sized to their content.",
   "github": "https://github.com/iframe-resizer/angular",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iframe-resizer/angular.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://iframe-resizer.com/pricing/"
   },
   "peerDependencies": {
     "@angular/common": "^18.0.0",
