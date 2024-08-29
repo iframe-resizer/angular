@@ -1,6 +1,6 @@
 {
   "name": "@iframe-resizer/angular",
-  "version": "5.2.6-beta.1",
+  "version": "5.2.6-beta.2",
   "license": "GPL-3.0",
   "description": "Keep iFrames sized to their content.",
   "github": "https://github.com/iframe-resizer/angular",

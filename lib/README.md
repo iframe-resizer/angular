@@ -1,24 +1,25 @@
-# IframeResizerAngularLib
+[<img src="https://iframe-resizer.com/logo-full.svg" alt="" title="" style="margin-bottom: -20px">](https://iframe-resizer.com)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+# @iframe-resizer/angular
 
-## Code scaffolding
+This package is part of __[iframe-resizer](https://iframe-resizer.com)__, a library that enables the automatic resizing of the height and width of both same and cross domain iframes to fit their contained content. It also provides a range of features to address the most common issues with using iframes.
 
-Run `ng generate component component-name --project @iframe-resizer/angular` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project @iframe-resizer/angular`.
-> Note: Don't forget to add `--project @iframe-resizer/angular` or else it will be added to the default project in your `angular.json` file. 
+__See [iframe-resizer.com](https://iframe-resizer.com) for details.__
 
-## Build
+## Install
 
-Run `ng build @iframe-resizer/angular` to build the project. The build artifacts will be stored in the `dist/` directory.
+Using npm:
 
-## Publishing
+```bash
+npm install @iframe-resizer/angular --save
+```
 
-After building your library with `ng build @iframe-resizer/angular`, go to the dist folder `cd dist/@iframe-resizer/angular` and run `npm publish`.
+or using yarn:
 
-## Running unit tests
+```bash
+yarn add @iframe-resizer/angular
+```
 
-Run `ng test @iframe-resizer/angular` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<!-- _iframe-resizer version @@PKG_VERSION@@ @@BUILD_DATE@@_ -->
